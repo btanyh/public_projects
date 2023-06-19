@@ -26,6 +26,8 @@ The objective of this project is to develop and deploy a highly accurate neural 
 
 ## Datasets
 
+**The dataset's size is too large to be uploaded to github. It can instead be found at this [Google Drive link](https://drive.google.com/drive/folders/10GEoMsKyk4APUICyZDgOHwfNTtbkaxpY?usp=sharing)**. Please download the data set and put it in the same directory as the code folder in order for the code note books to run correctly.
+
 1. The data for this project was obtained from the International Skin Imaging Collaboration (ISIC) which in their own words is ['an academia and industry partnership designed to facilitate the application of digital skin imaging to help reduce melanoma mortality'](https://www.isic-archive.com/#!/topWithHeader/tightContentTop/about/aboutIsicOverview). 
 
 1. Their database contains over 70,000 images of skin lesions which have been contributed by [various medical universities and cancer centers](https://www.isic-archive.com/#!/topWithHeader/tightContentTop/about/isicArchiveContent). These images of skin lesions have been classified with [ground-truth diagnoses](https://www.isic-archive.com/#!/topWithHeader/tightContentTop/about/isicArchiveGoals) of whether it is benign or malignant.
@@ -50,7 +52,7 @@ These observations underscore the need for cautious interpretation and generaliz
 
 1. After acquiring the data, I split it into training, validation, and holdout set in the following ratio (70% training, 20% validation, 10% holdout)
 
-1. I also split the data into its relevant folders(i.e. training, validation, or holdout folder), and within each folder, there are 2 folders which represent the class of the images inside the folder (i.e. benign folder with benign skin lesions inside it and malignant folder with malignant melanoma images inside it. These folders can be found under the `data` folder.
+1. I also split the data into its relevant folders(i.e. training, validation, or holdout folder), and within each folder, there are 3 folders which represent the class of the images inside the folder (e.g. benign folder with benign skin lesions inside it and malignant folder with malignant melanoma images inside it.) These folders can be found under the `data` folder.
 
 ---
 
@@ -151,6 +153,10 @@ With my final model trained, I then tested it on the holdout dataset to see how 
 ![](images/Confusion_Matrix.png)![](images/Classification_Report.png)
    
 The final model had a good recall score of 0.96 and as well as a good precision score of 0.92, as shown above in the confusion matrix and the classification report.
+
+The recall score of 0.96 indicates that the model is able to correctly identify 96% of the positive instances in the dataset. This means that the model has a high sensitivity in detecting the positive samples and minimizing the number of false negatives.
+
+A high recall score in the context of this problem statement is crucial as it ensures that the model is effective in identifying malignant skin lesions. With a recall score of 0.96, the model is able to capture a significant proportion of the actual malignant cases, reducing the risk of missing potentially harmful lesions and allowing for early detection and appropriate medical intervention.
 
 ## Model Deployment
 
